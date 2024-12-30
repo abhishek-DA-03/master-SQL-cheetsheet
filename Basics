@@ -1,0 +1,20 @@
+## Table Overview
+- Show Tables: SHOW TABLES; 
+- Describe Table Structure: DESCRIBE table_name;
+- Select All Data from a Table: SELECT * FROM table_name;
+- Count Rows in a Table: SELECT COUNT(*) FROM table_name;
+- List Unique Values in a Column: SELECT DISTINCT column_name FROM table_name;
+
+## Aggregations and Summaries
+- Count Distinct Values: SELECT COUNT(DISTINCT column_name) FROM table_name;
+- Calculate Average Value: SELECT AVG(column_name) FROM table_name;
+- Sum Values: SELECT SUM(column_name) FROM table_name;
+- Find Maximum and Minimum: SELECT MAX(column_name), MIN(column_name) FROM table_name;
+- Group By and Aggregate: SELECT column, COUNT(*), AVG(column2) FROM table_name GROUP BY column1;
+
+## Data Slicing and Filtering
+- Select with Specific Criteria: SELECT * FROM table_name WHERE condition;
+- Filtering with Multiple Conditions: SELECT * FROM table_name WHERE condition AND condition2;
+- Select with ORDER BY: SELECT * FROM table_name ORDER BY column ASC/DESC;
+- Select with LIMIT: SELECT * FROM table_name LIMIT number;
+- Using BETWEEN for Range: SELECT * FROM table_name WHERE column BETWEEN valuel AND value2;
