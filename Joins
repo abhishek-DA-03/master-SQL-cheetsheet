@@ -1,0 +1,39 @@
+## Joins and Relationships
+- Inner Join: 
+SELECT * 
+FROM table1 
+INNER JOIN table2 ON table1 .common_column = table2. common_column;
+
+- Left Join: 
+SELECT * 
+FROM table1 
+LEFT JOIN table2 ON table1.common_column = table2.common_column;
+
+- Right Join: 
+SELECT * 
+FROM tablel RIGHT JOIN table2 ON table1 .common_column = table2.common_column;
+
+- Full Outer Join: 
+SELECT * 
+FROM table1 FULL OUTER JOIN table2 ON table1 .common_column = table2. common_column;
+
+- Cross Join: 
+SELECT * FROM table1 CROSS JOIN table2;
+
+## Advanced Joins
+- Self Join for Hierarchical Data: 
+SELECT t1.column, t2.column 
+FROM table t1 JOIN table t2 ON t1.id = t2. parent_id;
+
+- Join with Aggregation: 
+SELECT t1.column, SUM(t2.column) 
+FROM table1 t1 JOIN table2 t2 ON t1.id = t2. foreign_id 
+GROUP BY t1.column;
+
+- Join with Complex Conditions: 
+SELECT * 
+FROM table1 t1 JOIN table2 t2 ON t1.id = t2. foreign_id AND t2.condition = 'value' :
+
+- Lateral Join (Correlated Subquery): 
+SELECT * 
+FROM tablel t1, LATERAL (SELECT * FROM table2 t2 WHERE t2. foreign_id = tl.id) as subquery;
